@@ -1,6 +1,6 @@
 # PINN-WSGG-Pressure
 
-> A bundled release containing the Python, OpenFOAM, and Fluent-UDF implementations of the pressure-dependent PINN-WSGG model for H2O-CO2-CO participating-gas mixtures.
+> A bundled release containing the Python, OpenFOAM, and Fluent-UDF implementations of the pressure-dependent PINN-WSGG model for H<sub>2</sub>O-CO<sub>2</sub>-CO participating-gas mixtures.
 
 ---
 
