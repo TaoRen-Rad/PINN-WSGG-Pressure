@@ -1,0 +1,88 @@
+PINN-WSGG Academic Research and Non-Commercial License v1.0
+
+Copyright (c) 2026 Tao Ren and contributors
+
+This License applies to the repository and all software, source code, scripts,
+parameter files, example cases, figures, documentation, and other materials
+distributed with it (collectively, the "Materials").
+
+By accessing, downloading, using, copying, modifying, or distributing any part
+of the Materials, you agree to the terms of this License.
+
+1. Definitions
+
+"Non-Commercial Use" means use solely for academic research, teaching,
+scholarly publication, internal evaluation, personal study, or scientific
+exchange, and not primarily intended for or directed toward commercial
+advantage or monetary compensation.
+
+"Commercial Use" means any use not qualifying as Non-Commercial Use,
+including, without limitation:
+
+- integration into commercial CFD software, proprietary simulation platforms,
+  or commercial software products;
+- use in paid engineering services, consulting deliverables, or fee-based
+  technical support;
+- use in contract research, sponsored development, or work performed for the
+  commercial benefit of a third party;
+- sale, sublicense, hosting, or paid distribution of the Materials or
+  derivative works; and
+- use in a workflow, product, or service for which access, functionality, or
+  output is provided in exchange for compensation or commercial advantage.
+
+2. License Grant
+
+Subject to your full compliance with this License, the authors grant you a
+limited, non-exclusive, non-transferable, revocable license to use, reproduce,
+modify, and redistribute the Materials, in whole or in part, solely for
+Non-Commercial Use.
+
+3. Conditions of Use and Redistribution
+
+If you use or redistribute the Materials or any permitted derivative work, you
+must:
+
+- retain this License and all applicable copyright notices in any copy or
+  substantial portion of the Materials;
+- clearly state whether you modified the Materials; and
+- not represent that any modified version is an official release or endorsed by
+  the authors unless you have prior written permission.
+
+4. Commercial Use Restriction
+
+No Commercial Use is permitted without prior written permission from the
+authors. No right to sell, license for a fee, provide as a paid service, or
+incorporate into a commercial offering is granted under this License.
+
+5. No Endorsement
+
+This License does not grant any right to use the authors' names, affiliations,
+logos, or project name to imply endorsement, sponsorship, or certification of
+any derivative work, product, or service without prior written permission.
+
+6. No Warranty
+
+THE MATERIALS ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTIES OF
+ACCURACY, COMPLETENESS, PERFORMANCE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, NON-INFRINGEMENT, OR TITLE.
+
+7. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHORS AND CONTRIBUTORS
+SHALL NOT BE LIABLE FOR ANY CLAIM, DEMAND, LOSS, DAMAGE, COST, OR OTHER
+LIABILITY, WHETHER DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL,
+EXEMPLARY, OR OTHERWISE, ARISING FROM OR RELATED TO THE MATERIALS OR THEIR USE,
+MISUSE, OR INABILITY TO BE USED.
+
+8. Termination
+
+This License terminates automatically if you fail to comply with any of its
+terms. Upon termination, you must cease any use or distribution of the
+Materials except to the extent that applicable law independently permits such
+activity.
+
+9. Commercial Licensing Contact
+
+For Commercial Use permissions or licensing inquiries, please contact:
+tao.ren@sjtu.edu.cn

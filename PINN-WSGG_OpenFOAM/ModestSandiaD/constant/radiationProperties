@@ -1,0 +1,51 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      radiationProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+radiation on;
+
+radiationModel  nonGreyP1;
+
+nonGreyP1Coeffs
+{
+    C               C [0 0 0 0 0 0 0] 0;
+}
+
+// Number of flow iterations per radiation iteration
+solverFreq 1;
+
+absorptionEmissionModel nonGreyMeanAbsorptionEmission;
+
+nonGreyMeanAbsorptionEmissionCoeffs
+{
+    nBands                  9;    // Number of bands
+    EhrrCoeff               0.0;
+    spectrumModelName       WSGG;
+    
+    speciesNames            // 添加这个
+    (
+        H2O
+        CO2
+        CO
+    );
+}
+
+scatterModel    none;
+
+sootModel       none;
+
+transmissivityModel none;
+
+// ************************************************************************* //

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -eu
+
+SRC_DIR="$(CDPATH= cd -- "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(CDPATH= cd -- "${SRC_DIR}/.." && pwd)"
+LOCAL_LIBBIN="${ROOT_DIR}/platforms/${WM_OPTIONS}/lib"
+
+mkdir -p "${LOCAL_LIBBIN}"
+export FOAM_USER_LIBBIN="${LOCAL_LIBBIN}"
+
+cd "${SRC_DIR}/globalModelParameter/globalModelParameter"
+make clean
+cd "${SRC_DIR}/radiation"
+wclean

@@ -1,0 +1,7 @@
+Linux
+bash
+g++
+OpenFOAM==v2412
+wmake
+wclean
+thermoFoam

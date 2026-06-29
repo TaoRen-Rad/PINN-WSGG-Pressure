@@ -1,0 +1,72 @@
+# 通用忽略规则
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.json
+
+# 编译产生的中间文件
+*.gcno
+*.gcda
+*.ilk
+*.pdb
+*.obj
+*.exp
+*.lib
+
+# 编译产生的头文件和库文件
+radiation/lnInclude/
+
+# 构建目录
+build/
+**/build/
+Make/
+**/Make/
+linux64GccDPInt32Opt/
+**/linux64GccDPInt32Opt/
+
+# IDE 相关
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+*.vcxproj*
+*.filters
+
+# CMake 生成的文件
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+# Makefile
+*.cmake
+
+# 依赖目录
+deps/
+third_party/
+
+# 日志和临时文件
+*.log
+*.tmp
+*.swp
+*~
+*.bak
+
+# 测试相关
+*.gcov
+coverage/
+
+# 文档生成
+docs/html/
+docs/latex/
+doxygen/
+
+# macOS 特定
+.DS_Store
+._*
+
+*.mod

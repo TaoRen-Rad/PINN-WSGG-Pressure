@@ -1,0 +1,79 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.5                                   |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "3.93054";
+    object      totalG;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 0 -3 0 0 0 0];
+
+internalField   uniform 0; 
+
+boundaryField
+{
+    outlet
+    {
+        type            SP5J4;
+	T		T;
+	emissivityMode	lookup;
+	emissivity	uniform 1;
+        value           uniform 0;
+    }
+    inner
+    {
+        type            symmetryPlane;
+    }
+    sym2
+    {
+        type            wedge;
+    }
+    sym1
+    {
+        type            wedge;
+    }
+    outer
+    {
+        type            SP5J4;
+	T		T;
+	emissivityMode	lookup;
+	emissivity	uniform 1;
+        value           uniform 0;
+    }
+    jet
+    {
+        type            SP5J4;
+	T		T;
+	emissivityMode	lookup;
+	emissivity	uniform 1;
+        value           uniform 0;
+    }
+    pilot
+    {
+	type            SP5J4;
+	T		T;
+	emissivityMode	lookup;
+	emissivity	uniform 1;
+        value           uniform 0;
+    }
+    coFlow
+    {
+        type            SP5J4;
+	T		T;
+	emissivityMode	lookup;
+	emissivity	uniform 1;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

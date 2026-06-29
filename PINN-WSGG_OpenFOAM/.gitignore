@@ -1,0 +1,37 @@
+# Compiled libraries
+platforms/
+
+# OpenFOAM build outputs inside src
+src/radiation/lnInclude/
+src/radiation/Make/linux64GccDPInt32Opt/
+src/globalModelParameter/globalModelParameter/build/
+
+# Generic build artifacts
+*.o
+*.so
+*.a
+*.dll
+*.dylib
+*.exe
+*.out
+*.mod
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+
+# Case outputs
+ModestSandiaD/[1-9]*/
+ModestSandiaD/[1-9]
+ModestSandiaD/postProcessing/
+ModestSandiaD/log
+ModestSandiaD/log.*
+ModestSandiaD/cpuTime
+ModestSandiaD/nohup.out
+ModestSandiaD/nohup*.out
+
+# Optional extra case-generated fields
+ModestSandiaD/0/*.old

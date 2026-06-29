@@ -1,0 +1,23 @@
+# Fluent compiled UDF outputs
+libudf/
+*.o
+*.so
+*.a
+*.dll
+*.dylib
+
+# Fluent case outputs
+*.cas
+*.cas.h5
+*.dat
+*.dat.h5
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+._*

@@ -1,0 +1,84 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.4.1                                 |
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version 2.0;
+    format ascii;
+
+    root "/scratch/axg330/sandiaD_wedge";
+    case "kl3";
+    instance "constant";
+    local "polyMesh";
+
+    class polyBoundaryMesh;
+    object boundary;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+8
+(
+outlet
+{
+    type patch;
+    nFaces 35;
+    startFace 6520;
+}
+
+inner
+{
+    type symmetryPlane;
+    nFaces 95;
+    startFace 6555;
+}
+
+sym2
+{
+    type wedge;
+    nFaces 3325;
+    startFace 6650;
+}
+
+sym1
+{
+    type wedge;
+    nFaces 3325;
+    startFace 9975;
+}
+
+outer
+{
+    type patch;
+    nFaces 95;
+    startFace 13300;
+}
+
+jet
+{
+    type patch;
+    nFaces 10;
+    startFace 13395;
+}
+
+pilot
+{
+    type patch;
+    nFaces 9;
+    startFace 13405;
+}
+
+coFlow
+{
+    type patch;
+    nFaces 16;
+    startFace 13414;
+}
+)
+
+// ************************************************************************* //
