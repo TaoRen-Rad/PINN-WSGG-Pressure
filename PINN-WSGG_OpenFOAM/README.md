@@ -8,6 +8,11 @@
 
 This repository provides the OpenFOAM source code for a pressure-dependent PINN-WSGG radiation model together with a `thermoFoam` demonstration case. The package contains the released `nonGreyP1` radiation implementation, the deployed `wsgg.json` neural-network parameters, and local build scripts for compiling the required shared libraries.
 
+The repository is intended to run as a self-contained package: the local
+libraries are built into this repository's own `platforms/$WM_OPTIONS/lib`
+directory, and the provided wrapper script launches the example case with those
+local libraries first on the search path.
+
 **Key features:**
 
 - Pressure-dependent PINN-WSGG model for H<sub>2</sub>O / CO<sub>2</sub> / CO gas mixtures
@@ -32,6 +37,22 @@ If your OpenFOAM installation is in a different location, replace the path accor
 
 ---
 
+## Quick Start
+
+From the repository root:
+
+```bash
+source /opt/OpenFOAM/OpenFOAM-v2412/etc/bashrc
+./src/Allwmake
+./run_example.sh
+```
+
+This is the recommended workflow. `run_example.sh` forces the example case to
+use the libraries compiled inside this repository, avoiding accidental pickup
+of similarly named libraries from other OpenFOAM workspaces.
+
+---
+
 ## Build
 
 Enter the package directory:
@@ -47,11 +68,10 @@ export PINN_WSGG_ROOT=$(pwd)
 ./src/Allwmake
 ```
 
-Set the local library path before running the case:
+`./src/Allwmake` compiles the local libraries into:
 
 ```bash
-export FOAM_USER_LIBBIN=$PINN_WSGG_ROOT/platforms/$WM_OPTIONS/lib
-export LD_LIBRARY_PATH=$FOAM_USER_LIBBIN:$LD_LIBRARY_PATH
+./platforms/$WM_OPTIONS/lib
 ```
 
 To remove locally built files:
@@ -64,9 +84,28 @@ To remove locally built files:
 
 ## Run the Example Case
 
-Run the bundled `thermoFoam` case:
+Run the bundled case through the repository wrapper:
 
 ```bash
+./run_example.sh
+```
+
+`run_example.sh` will:
+
+- load the OpenFOAM v2412 environment if it is not already loaded
+- prepend this repository's `platforms/$WM_OPTIONS/lib` to `LD_LIBRARY_PATH`
+- run `thermoFoam` on `./ModestSandiaD`
+
+This keeps the case isolated from other `libglobalModels.so` builds that may
+exist elsewhere on the machine.
+
+If you prefer to invoke `thermoFoam` directly, make sure the repository-local
+library directory is first on `LD_LIBRARY_PATH`:
+
+```bash
+export PINN_WSGG_ROOT=$(pwd)
+export FOAM_USER_LIBBIN=$PINN_WSGG_ROOT/platforms/$WM_OPTIONS/lib
+export LD_LIBRARY_PATH=$FOAM_USER_LIBBIN:$LD_LIBRARY_PATH
 thermoFoam -case ./ModestSandiaD
 ```
 
@@ -88,7 +127,10 @@ PINN-WSGG_OpenFOAM/
 │   ├── constant/
 │   ├── postProcessing/
 │   └── system/
-├── platforms/                        # Local compiled libraries
+├── platforms/
+│   └── $WM_OPTIONS/
+│       └── lib/                      # Local compiled libraries
+├── run_example.sh                    # Wrapper for isolated local execution
 ├── src/                              # OpenFOAM source code
 │   ├── Allwmake
 │   ├── Allwclean
@@ -109,7 +151,7 @@ PINN-WSGG_OpenFOAM/
 
 - The current package is a reduced release focused on the PINN-WSGG + `nonGreyP1` workflow.
 - The previously used auxiliary function objects for volume-fraction and Planck-mean post-processing are not part of the current runnable path.
-- The example case has been verified locally with `thermoFoam -case ./ModestSandiaD` after compiling the libraries in this package.
+- The example case has been verified locally with `./run_example.sh` after compiling the libraries in this package.
 
 ---
 
