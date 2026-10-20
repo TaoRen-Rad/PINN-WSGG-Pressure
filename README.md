@@ -34,6 +34,25 @@ PINN-WSGG-Pressure/
 
 ---
 
+## Cite as
+
+If you use this work in your research, please cite as follows,
+
+```bibtex
+@article{Wang2027PressurePINNWSGG,
+  title = {Pressure-dependent spectral-moment-constrained physics-informed neural-network {WSGG} model for multi-species gas mixtures},
+  author = {Wang, Jiaxin and Chen, Wei and Ren, Tao and Zhao, Changying},
+  year = {2027},
+  journal = {International Journal of Heat and Mass Transfer},
+  volume = {273},
+  pages = {129746},
+  issn = {0017-9310},
+  doi = {10.1016/j.ijheatmasstransfer.2026.129746}
+}
+```
+
+J. Wang, W. Chen, T. Ren, and C. Zhao, “Pressure-dependent spectral-moment-constrained physics-informed neural-network WSGG model for multi-species gas mixtures,” *International Journal of Heat and Mass Transfer*, vol. 273, Article 129746, 2027, doi: [10.1016/j.ijheatmasstransfer.2026.129746](https://doi.org/10.1016/j.ijheatmasstransfer.2026.129746).
+
 ## License
 
 This repository is made publicly available under the custom
